@@ -1,0 +1,140 @@
+.to-do {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+.card-header,
+.card-header span {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.card-header span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+}
+.card-header span:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.card-body {
+  gap: 10px;
+}
+
+.task {
+  width: 95%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
+
+.btns span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.task-name {
+  margin-left: 10px;
+  overflow: hidden;
+}
+#task-name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.btns {
+  margin-right: 10px;
+  gap: 20px;
+}
+.done {
+  background-color: green;
+}
+.alert {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%);
+  display: none;
+}
+.btns span::before {
+  width: 80px;
+  height: 30px;
+  border-radius: 2px;
+  color: white;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: none;
+}
+.btns span:hover::before {
+  display: flex;
+}
+
+.btns span:nth-child(1):before {
+  content: "Update";
+  right: 40px;
+}
+.btns span:nth-child(2):before {
+  content: "Complete";
+  top: -40px;
+}
+.btns span:nth-child(3):before {
+  content: "Delete";
+  left: 40px;
+}
+
+.all-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  position: relative;
+  visibility: hidden;
+  width: 25rem;
+}
+.all-text span {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 568px) {
+  #task-name {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .btns {
+    gap: 8px;
+  }
+  .to-do {
+    width: 90%;
+  }
+  .all-text {
+    width: 90%;
+    overflow-y: scroll;
+    transform: translate(-50%, -50%);
+  }
+  .btns span:nth-child(3):before {
+    top: 40px;
+    left: -20px;
+  }
+}
