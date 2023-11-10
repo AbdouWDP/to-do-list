@@ -102,8 +102,7 @@
 .all-text {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
   position: relative;
   visibility: hidden;
   width: 25rem;
